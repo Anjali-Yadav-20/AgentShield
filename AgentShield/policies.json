@@ -1,0 +1,22 @@
+{
+  "risk_thresholds": {
+    "LOW": 0,
+    "MEDIUM": 25,
+    "HIGH": 45,
+    "CRITICAL": 70
+  },
+  "tool_risk": {
+    "read_public_file": "LOW",
+    "create_report": "LOW",
+    "search_local_knowledge": "LOW",
+    "read_sensitive_file": "HIGH",
+    "execute_safe_demo_action": "MEDIUM",
+    "arbitrary_command_execution": "BLOCKED"
+  },
+  "untrusted_sources": [
+    "EXTERNAL_DOCUMENT",
+    "WEB_CONTENT",
+    "UNKNOWN"
+  ],
+  "notes": "Deterministic policy configuration for AgentShield. Sensitive-file access always requires explicit human confirmation (REVIEW) when requested by a directly trusted source, and is blocked outright when derived from untrusted content."
+}
